@@ -4,6 +4,8 @@ English | [Русский](README.ru.md)
 
 A desktop Markdown viewer and editor built on GitHub's rendering stack.
 
+![Screenshot](screenshot.png)
+
 | Layer | GitHub | mdview |
 |-------|--------|--------|
 | Parser | cmark-gfm / comrak | **comrak** (GFM: tables, task lists, footnotes, `[!NOTE]` alerts, `:emoji:`, math) |

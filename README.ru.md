@@ -4,6 +4,8 @@
 
 Десктопный просмотрщик и редактор Markdown, собранный по стеку GitHub.
 
+![Screenshot](screenshot.png)
+
 | Слой | GitHub | mdview |
 |------|--------|--------|
 | Парсер | cmark-gfm / comrak | **comrak** (GFM: таблицы, чекбоксы, сноски, алерты `[!NOTE]`, `:emoji:`, математика) |
