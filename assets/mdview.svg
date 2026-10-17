@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Icon based on the Markdown Mark (Dustin Curtis, CC0 / public domain). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="#1f883d"/>
+  <rect x="38" y="70" width="180" height="116" rx="14" fill="none" stroke="#ffffff" stroke-width="12"/>
+  <path d="M62 160V96h18l18 22 18-22h18v64h-18v-37l-18 22-18-22v37zm110 0l-26-28h17V96h18v36h17z" fill="#ffffff"/>
+</svg>

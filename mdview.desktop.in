@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=mdview
+GenericName=Markdown Viewer
+Comment=Markdown viewer and editor rendered like GitHub
+Exec=@BIN@ %f
+Icon=mdview
+Terminal=false
+Categories=Utility;TextEditor;Office;
+MimeType=text/markdown;text/x-markdown;
+Keywords=markdown;md;preview;editor;
+StartupNotify=true

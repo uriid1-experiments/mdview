@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mdview</title>
+<style>{{GH_CSS}}</style>
+<style>{{APP_CSS}}</style>
+</head>
+<body>
+
+<header id="menubar" class="menubar">
+  <div class="menu" data-menu="file">
+    <button class="menu-title">Файл</button>
+    <div class="dropdown">
+      <button data-cmd="new">Новый<span class="key">Ctrl+N</span></button>
+      <button data-cmd="open">Открыть…<span class="key">Ctrl+O</span></button>
+      <div id="recent-list"></div>
+      <hr>
+      <button data-cmd="save">Сохранить<span class="key">Ctrl+S</span></button>
+      <button data-cmd="saveAs">Сохранить как…<span class="key">Ctrl+Shift+S</span></button>
+      <hr>
+      <button data-cmd="reload" data-needs-doc>Перечитать с диска<span class="key">F5</span></button>
+      <button data-cmd="reveal" data-needs-doc>Показать в папке</button>
+      <button data-cmd="close" data-needs-doc>Закрыть файл<span class="key">Ctrl+W</span></button>
+      <hr>
+      <button data-cmd="quit">Выход<span class="key">Ctrl+Q</span></button>
+    </div>
+  </div>
+
+  <div class="menu" data-menu="view">
+    <button class="menu-title">Вид</button>
+    <div class="dropdown">
+      <div class="label">Режим</div>
+      <button data-radio="mode:preview">Просмотр</button>
+      <button data-radio="mode:split">Редактор и просмотр</button>
+      <button data-radio="mode:editor">Редактор</button>
+      <button data-cmd="cycleMode">Переключить режим<span class="key">Ctrl+E</span></button>
+      <hr>
+      <div class="label">Тема</div>
+      <button data-radio="theme:system">Как в системе</button>
+      <button data-radio="theme:light">Светлая</button>
+      <button data-radio="theme:dark">Тёмная</button>
+      <button data-cmd="cycleTheme">Переключить тему<span class="key">Ctrl+Shift+T</span></button>
+      <hr>
+      <button data-cmd="zoomIn">Увеличить<span class="key">Ctrl++</span></button>
+      <button data-cmd="zoomOut">Уменьшить<span class="key">Ctrl+−</span></button>
+      <button data-cmd="zoomReset">Обычный масштаб<span class="key">Ctrl+0</span></button>
+      <hr>
+      <button data-cmd="toggleMenu">Скрыть меню<span class="key">Ctrl+Shift+M</span></button>
+    </div>
+  </div>
+
+  <div class="menu" data-menu="go">
+    <button class="menu-title">Переход</button>
+    <div class="dropdown">
+      <button data-cmd="back" id="nav-back">Назад<span class="key">Alt+←</span></button>
+      <button data-cmd="forward" id="nav-forward">Вперёд<span class="key">Alt+→</span></button>
+      <hr>
+      <button data-cmd="scrollTop">В начало<span class="key">Ctrl+Home</span></button>
+      <button data-cmd="scrollBottom">В конец<span class="key">Ctrl+End</span></button>
+    </div>
+  </div>
+
+  <div class="menu" data-menu="help">
+    <button class="menu-title">Справка</button>
+    <div class="dropdown">
+      <button data-cmd="shortcuts">Горячие клавиши</button>
+      <button data-cmd="about">О программе</button>
+    </div>
+  </div>
+
+  <div class="menubar-spacer"></div>
+  <div id="docpath" class="menubar-path"></div>
+</header>
+
+<div id="banner" class="banner" hidden>
+  <span>Файл изменён на диске, а в редакторе есть несохранённые правки.</span>
+  <button class="btn btn-small" data-cmd="reloadFromDisk">Перечитать с диска</button>
+  <button class="btn btn-small" data-cmd="dismissBanner">Оставить мою версию</button>
+</div>
+
+<main id="main" class="mode-preview">
+  <section id="editor-pane" class="pane">
+    <textarea id="editor" spellcheck="false" placeholder="# Заголовок"></textarea>
+    <div id="editor-status" class="status"></div>
+  </section>
+  <section id="preview-pane" class="pane">
+    <article id="content" class="markdown-body"></article>
+  </section>
+</main>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-box" role="dialog">
+    <div id="modal-text" class="modal-text"></div>
+    <div id="modal-actions" class="modal-actions"></div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+
+<script>window.__INITIAL__ = {{INITIAL}};</script>
+<script>{{APP_JS}}</script>
+</body>
+</html>
